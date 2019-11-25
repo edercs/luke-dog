@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Planos</title>
+		</head>
+	<body>
+
+		<h1>Planos</h1>
+
+		<table>
+			<tr>
+				<td>Código</td>
+				<td>Data início</td>
+				<td>Data final</td>
+				<td>Descrição</td>
+				<td>Valor da parcela</td>
+				<td>Desconto</td>
+			</tr>
+
+			<% for (var i = 0; i < planos.length; i++) { %>
+				<tr>
+					<td><%= planos[i].codigo %></td>
+					<td><%= planos[i].data_inicio %></td>
+					<td><%= planos[i].data_final %></td>
+					<td><%= planos[i].descricao %></td>
+					<td><%= planos[i].valor_parcela %></td>
+					<td><%= planos[i].desconto %></td>
+				</tr>
+			<% } %>
+
+		</table>
+	</body>
+</html>
