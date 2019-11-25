@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Plano</title>
+		</head>
+	<body>
+
+		<h1>Plano selecionado</h1>
+
+		<table>
+			<tr>
+				<td>Código</td>
+				<td>Data início</td>
+				<td>Data final</td>
+				<td>Descrição</td>
+				<td>Valor da parcela</td>
+			</tr>
+
+			<tr>
+				<td><%= plano[0].codigo %></td>
+				<td><%= plano[0].data_inicio %></td>
+				<td><%= plano[0].data_final %></td>
+				<td><%= plano[0].descricao %></td>
+				<td><%= plano[0].valor_parcela %></td>
+			</tr>
+			
+		</table>
+	</body>
+</html>

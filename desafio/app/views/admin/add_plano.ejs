@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Formulário de cadastro de Notícia</title>
+		</head>
+	<body>
+
+		<h1>Adicionar notícia</h1>
+		<br />
+
+		<form action="/planos/salvar" method="post">
+			<label>Data início</label><br />
+			<input type="date" id="data_inicio" name="data_inicio" value="<%= plano.data_inicio %>" >
+			<br />
+			<label>Data final</label><br />
+			<input type="date" id="data_final" name="data_final" value="<%= plano.data_final %>" >
+			<br />
+			<label>Valor parcela</label><br />
+			<input type="text" id="valor_parcela" name="valor_parcela" value="<%= plano.valor_parcela %>" >
+			<br />
+			<label>Desconto</label><br />
+			<input type="text" id="desconto" name="desconto" value="<%= plano.desconto %>">
+			<br />
+			<label>Descrição</label><br />
+			<textarea id="descricao" name="descricao" rows="5" cols="30" ><%= plano.descricao %></textarea>
+			<br />
+			<input type="submit" value="Enviar">
+		</form>
+
+		<% if (validacao) { %>
+			<ul>
+				<% for (var i = 0; i < validacao.length; i++) { %>
+					<li>
+						<%= validacao[i].msg %>
+					</li>
+				<% } %>
+			</ul>
+		<% } %>
+	</body>
+</html>
